@@ -9,6 +9,8 @@
 
     <?php
         echo "hello";
+        $name = "harhans";
+        echo $name ;
 
     ?>
     
