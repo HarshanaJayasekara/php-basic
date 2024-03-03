@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            text-align: center; /* Corrected the property name to 'text-align' */
+        }
+
+        h1 {
+            color: red;
+        }
+
+        img {
+            height: 400px;
+        }
+    </style>
+
+    <script>
+        function populator() {
+            // Get the selected value from the dropdown
+            var selection = document.getElementById('prts').value;
+
+            // Update the image source based on the selected value
+            var petImage = document.getElementById('petImage');
+            var textId = document.getElementById('textid');
+
+            if (selection === 'garfields') {
+                petImage.src = 'garfield.jpg';
+                textId.textContent = 'Garfield';
+            } else if (selection === 'jone') {
+                petImage.src = 'jone.jpg';
+                textId.textContent = 'Jone';
+            } else if (selection === 'odie') {
+                petImage.src = 'OIP.jpg';
+                textId.textContent = 'Odie';
+            } else if (selection === 'select') {
+                petImage.src = '';
+                textId.textContent = 'Hello!';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 id="textid">Hello!</h1>
+
+    <select id="prts" onchange="populator()">
+            <option value="select">Select</option>
+            <option value="garfields">Garfield</option>
+            <option value="jone">Jone</option>
+            <option value="odie">Odie</option>
+    </select>
+
+    <img id="petImage">
+    
+</body>
+</html>
