@@ -8,7 +8,7 @@
 <body>
 
     <?php
-        echo "hello";
+       /* echo "hello";
         $name = "harhans";
         $int = 25;
         $float =2.2;
@@ -17,7 +17,11 @@
         $age = [2,5,8];
 
         $object = new obj();
-        echo $name ;
+        echo $name ;*/
+
+        echo $_SERVER["PHP_SELF"];
+        echo $_SERVER["DOCUMENT_ROOT"];
+        echo $_SERVER["SERVER_NAME"];
 
 
     ?>
